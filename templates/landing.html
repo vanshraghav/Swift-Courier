@@ -1,0 +1,319 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/png" href="https://www.swiftcourrier.com/dashboard/logo-image/image_logo.php?id=2"/>
+	<title>Swift Courier Company</title>
+	<meta name="description" content="                                 We are a leading company in service customer, paquete-ria internationally and throughout America. We provide immediate and safe solutions to all our customers through the modality of shipping door to door, for several countries of America, offering our clients a service of fast delivery and the best price of the market."/>
+	<meta name="keywords" content="                                 swift courier, delivery, shipping, box, package, delivery express, invoices" />
+	<meta name="author" content="Jaomweb">
+	<meta name="google-site-verification" content="Xv9F1Y7CVSx1Yt3VNWuPDDbvdSbx8BDrNUJFeO-BMuQ" />
+
+	<!-- Style CSS -->
+    <link rel="stylesheet" type="text/css" href="https://vr7017366984.pythonanywhere.com/static/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://vr7017366984.pythonanywhere.com/static/responsive.css" />
+	<script src="
+https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/ie7/ie7.min.js
+"></script>
+<link href="
+https://cdn.jsdelivr.net/npm/ti-icons@0.1.2/css/themify-icons.min.css
+" rel="stylesheet">
+	<style type="text/css">
+		.userform{width: 400px;}
+		.userform p {
+			width: 100%;
+		}
+		.userform label {
+			width: 120px;
+			color: #333;
+			float: center;
+		}
+		input.error {
+			border: 1px dotted #FF4D4D;
+
+		}
+		label.error{
+			width: 100%;
+			color: #FF4D4D;
+			font-style: italic;
+			margin-center: 120px;
+			margin-bottom: 15px;
+		}
+		.userform input.submit {
+			margin-center: 120px;
+		}
+	</style>
+
+</head>
+<body class="home1 home">
+	{% block navbar %}
+	<div id="wrapper">
+
+    <header id="header" class="site-header dark-header">
+			<div class="container clearfix">
+				<div class="site-brand">
+          <nav class="main-menu">
+            <span class="mobile-btn"><i class="ti ti-menu"></i></span>
+            <ul>
+              <li class="current-menu-item"><a href="index">HOME</a></li>
+              <li><a href="signup">SIGN UP</a></li>
+
+              <li><a href="about">ABOUT US</a></li>
+              <li><a href="faq">FAQ</a></li>
+              <!-- <li><a href="contact">CONTACT US</a></li> -->
+            </ul>
+          </nav>
+				</div><!-- .site-brand -->
+        <!-- <a class="button primary-button login-button" href="login">LOGIN</a> -->
+				<div class="dropdown" style="float:right;margin-top:2px;">
+          <button class="button primary-button login-button dropbtn" style="float:right;margin-top:2px;">LOGIN</button>
+          <div class="dropdown-content">
+            <a href="admin">Admin Login</a>
+            <a href="login">Customer Login</a>
+          </div>
+        </div>
+        <a href="signup"class="button primary-button login-button dropbtn" style="float:right;margin-top:2px;">Signup</a>
+
+				<!-- .main-menu -->
+			</div><!-- .container -->
+		</header><!-- .site-header -->
+    <style>
+
+
+      /* Dropdown container */
+      .dropdown {
+        position: relative;
+        display: inline-block;
+        margin-left: auto; /* Move the dropdown to the right */
+      }
+
+      /* Dropdown content (hidden by default) */
+      .dropdown-content {
+
+		position: absolute;
+		opacity: 0; /* Initially hide the dropdown */
+		max-height: 0; /* Initially hide the dropdown */
+		overflow: hidden;
+		background-color: #f9f9f9;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		z-index: 1;
+		transition: opacity 1s ease, max-height 1s ease; /* Add a smooth transition for opacity and max-height */
+	  }
+
+      /* Links inside the dropdown */
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #f1f1f1;
+      }
+
+      /* Show the dropdown menu on hover */
+      .dropdown:hover .dropdown-content {
+
+		opacity: 1; /* Set opacity to fully show the dropdown */
+		max-height: 200px;
+		margin-top: 50px;
+
+      }
+
+      .site-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .main-menu {
+        margin-left: auto;}
+              </style>
+			{% endblock %}
+			{% block content %}
+		<main id="main" class="site-main">
+			<section class="page-title" style="background-image: url(https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);background-size:cover;">
+				<div class="container" style="background-color: rgba(49, 49, 49, 0.5);">
+					<h1>Welcome to</h1>
+					<p>SWIFT COURIER COMPANY</p>
+					<div class="row">
+						<div class="col-md-10 col-md-offset-1">
+							<form id="tracking-form" class="page-title-search">
+								<input name="shipping" id="tracking-id" maxlength="10" pattern="[0-9]{1,10}" title="Please enter a maximum of 10 digits."type="search" placeholder="Tracking Number..." required>
+								<input type="submit" value="TRACK">
+							</form>
+						</div>
+					</div>
+				</div><!-- .container -->
+			</section><!-- .page-title -->
+      <script>
+        document.getElementById('tracking-form').addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          const trackingId = document.getElementById('tracking-id').value;
+
+          window.location.href = `/track-bookings?tracking_id=${trackingId}`;
+        });
+      </script>
+
+
+			<section class="can-we-help-you section light-bg">
+				<div class="container">
+					<h2 class="section-title">Why you <span>choose us?</span></h2>
+					<p class="section-desc">WE DELIVER TO ANY ZIPCODE, WE THINK OF YOU FIRST</p>
+
+					<div class="row">
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<div class="service-box service-center">
+								<div class="icon"><img src="https://www.swiftcourrier.com/assets/images/assets/icons/icon5.png" alt=""></div>
+								<h3 class="service-title"><a href="#">PREMIUM SUPPORT</a></h3>
+								<div class="service-desc">Speed up your shipping — and your growth. Our premium services include fast, global, transit solutions to meet even the tightest deadlines
+</div>
+								<a class="read-more" href="pages/premiun_support"></a>
+							</div><!-- .service-box service-center -->
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<div class="service-box service-center">
+								<div class="icon"><img src="https://www.swiftcourrier.com/assets/images/assets/icons/icon6.png" alt=""></div>
+								<h3 class="service-title"><a href="#">COURIER EXPRESS</a></h3>
+								<div class="service-desc">Move heavy shipments without heavy delays. Express Freight has a variety of services to deliver your freight, whether your deadline is a few hours or a few days. Saturday service may be available for an additional fee, depending on the service selected and your recipient’s ZIP code.</div>
+								<a class="read-more" href="pages/courier_express"></a>
+							</div><!-- .service-box service-center -->
+						</div>
+
+						<div class="col-md-4 col-sm-6 col-xs-6">
+							<div class="service-box service-center">
+								<div class="icon"><img src="https://www.swiftcourrier.com/assets/images/assets/icons/icon7.png" alt=""></div>
+								<h3 class="service-title"><a href="#">EXPEDITED COURIER</a></h3>
+								<div class="service-desc">For your time-sensitive delivery, you want the fastest and most effective strategy. So do we</div>
+								<a class="read-more" href="pages/courier_normal"></a>
+							</div><!-- .service-box service-center -->
+						</div>
+
+					</div><!-- .row -->
+				</div><!-- .container -->
+			</section><!-- .can-we-help-you -->
+
+			<section class="blog-slider-section section">
+				<div class="container">
+					<h2 class="section-title"> <span></span></h2>
+					<p class="section-desc"></p>
+
+					<div class="blog-slider blog-grid owl-carousel">
+						<article class="post">
+							<a href="pages/courier_extension" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping1.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_extension">Our Vision</a></h3>
+								<p class="post-desc">To be an investor in the logistics service industry, helping the companies in which we invest create sustainable value and achieve superior returns</p>
+							</div>
+						</article>
+
+						<article class="post">
+							<a href="pages/courier_term&condition" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping2.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_term&condition">Our Mission</a></h3>
+								<p class="post-desc">holding company will provide superior returns to stakeholders through investments in companies that provide logistic related services. </p>
+							</div>
+						</article>
+
+						<article class="post">
+							<a href="pages/courier_protected" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping3.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_protected">Port Logistics Services</a></h3>
+								<p class="post-desc">This service is designed to be a supporting service to our freight subsidiary (Swift Freight)</p>
+							</div>
+						</article>
+
+						<article class="post">
+							<a href="pages/courier_delivery" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping4.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_delivery">Supply Chain Consultancy</a></h3>
+								<p class="post-desc">We offer supply chain consultancy services by bringing our expertise to help businesses plan and market intelligence data.</p>
+							</div>
+						</article>
+
+						<article class="post">
+							<a href="pages/courier_cargo" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping5.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_cargo">Warehousing</a></h3>
+								<p class="post-desc">Our priority is always to select sites with the set-up you need located within easy access of your facilities.</p>
+							</div>
+						</article>
+
+						<article class="post">
+							<a href="pages/courier_service" class="post-thumb hover-cycle">
+								<img alt="" src="https://www.swiftcourrier.com/assets/images/placeholder/shipping6.jpg">
+							</a>
+							<div class="post-info">
+								<h3 class="post-title"><a href="pages/courier_service">Haulage / Trucking Solution</a></h3>
+								<p class="post-desc">At Swift Courier Logistics, we have the resources and capabilities to ensure you receive the right shipping solution.</p>
+							</div>
+						</article>
+
+					</div><!-- .blog-slider -->
+				</div><!-- .container -->
+			</section><!-- .blog-slider-section -->
+		</main><!-- .site-main -->
+
+		{% endblock %}
+
+
+		<!-- Footer -->
+		<!-- .footer -->
+		{% block footer %}
+<footer id="footer" style="align-items: center;" class="site-footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-sm-9">
+						<div class="copyright">Copyright © 2023. Vansh Raghav.  No Rights Reserved (You can copy)						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#">Privacy</a>
+						&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Terms</a></div>
+
+
+					</div>
+
+					<div class="col-md-4 col-sm-3">
+						<a class="back-to-top" href="#">Back to top</a>
+					</div>
+				</div>
+			</div><!-- .container -->
+		</footer><!-- site-footer -->
+	</div><!-- #wrapper -->
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://www.swiftcourrier.com/assets/js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="https://www.swiftcourrier.com/assets/css/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.swiftcourrier.com/assets/css/libs/sticky/jquery.sticky.js"></script>
+    <script type="text/javascript" src="https://www.swiftcourrier.com/assets/css/libs/owl.carousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://www.swiftcourrier.com/assets/css/libs/waypoints/waypoints.min.js"></script>
+    <script type="text/javascript" src="https://www.swiftcourrier.com/assets/css/libs/counterup/jquery.counterup.min.js"></script>
+
+    <!-- orther script -->
+    <script  type="text/javascript" src="https://www.swiftcourrier.com/assets/js/main.js"></script>
+	<script src="https://www.swiftcourrier.com/assets/js/jquery.validate.js"></script>
+	<script src="https://kendo.cdn.telerik.com/2017.2.621/js/kendo.all.min.js"></script>
+
+
+		<!-- END PAGE LEVEL JS-->
+
+		<script type="text/javascript" src="https://www.swiftcourrier.com/dashboard/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+
+<!-- <script src="//code.tidio.co/f2mwrqrawr9ssd1g2z9dnekpih9fbq86.js" async></script> -->
+{% endblock %}
+</body>
+
+</html>		<!-- /Footer -->

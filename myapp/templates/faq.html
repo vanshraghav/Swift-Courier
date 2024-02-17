@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            /* max-width: 800px; */
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            text-align: left;
+            background-color: #ED3237;
+            margin: auto;
+            padding: 36px 37px;
+            margin-bottom: 10px;
+        }
+
+        details {
+            background-color: #f9f9f9;
+            color: #333;
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-radius: 8px;
+        }
+
+        summary {
+            padding: 12px 49px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            transition: height 1s ease;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary:after {
+            content: "\002B";
+            font-size: 1.5em;
+        }
+
+        .answer {
+            background-color: #d3d3d3;
+            margin: 5px;
+            line-height: 35px;
+        }
+
+        details[open] summary {
+            border-bottom: 1px solid #aaa;
+            margin-bottom: .5em;
+        }
+
+        details[open] summary:after {
+            content: "\00D7";
+        }
+
+        details[open] div {
+            padding: .5em 1em;
+        }
+
+        div {
+            padding: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Frequently Asked Questions</h1>
+        <details>
+            <summary>1. How to login in Swift Courier website?</summary>
+            <div class="answer">
+                1. Visit the Swift Courier website.<br>
+                2. Click on the "Login" button located in the top-right corner of the homepage.<br>
+                3. Enter your username and password in the provided fields.<br>
+                4. Click the "Login" button.
+            </div>
+        </details>
+        <details>
+            <summary>2. How do I track my order?</summary>
+            <div class="answer">
+                To track your order, visit our website and navigate to the "Track Order" page. Enter your order ID
+                associated with the order, then click "Submit". You'll be able to see real-time updates on the status
+                and location of your delivery.
+            </div>
+        </details>
+        <details>
+            <summary>3. I forgot my password. How can I reset it?</summary>
+            <div class="answer">
+                If you've forgotten your password, click on the "Forgot Password" link on the login page. Enter the
+                email address associated with your account, and we'll send you a link to reset your password.
+            </div>
+        </details>
+        <details>
+            <summary>4. How long will it take for my order to arrive?</summary>
+            <div class="answer">
+                Delivery times may vary depending on your location and the shipping method chosen. You can check the
+                delivery time during the checkout process. Once your order is shipped, you'll receive a tracking number
+                that will provide more precise delivery details.
+            </div>
+        </details>
+        <details>
+            <summary>5. Is it necessary to create an account to track my order?</summary>
+            <div class="answer">
+                No, it is mandatory to create an account. To track your order. You can track your order by using Tracker
+                id.
+            </div>
+        </details>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>404 Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: white;
+            font-family: 'Arvo', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .page_404 {
+            text-align: center;
+        }
+
+        .four_zero_four_bg {
+            background-image: url('https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            width:400px;
+            box-shadow: 0 0 4px 4px black;
+        }
+
+        .four_zero_four_bg h1 {
+            font-size: 100px;
+            color: #fff;
+            margin: 0;
+        }
+
+        .four_zero_four_bg h3 {
+            font-size: 36px;
+            color: #fff;
+        }
+
+        .link_404 {
+            color: #fff;
+            background: #ED3237;
+            padding: 10px 20px;
+            display: inline-block;
+            text-decoration: none;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .contant_box_404 {
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+    <section class="page_404">
+        <div class="four_zero_four_bg">
+            <h1 class="text-center">{{ status }}</h1>
+        </div>
+        <div class="contant_box_404">
+            <h3 class="h2">Oops! There is some problem.</h3>
+
+            <a href="/" class="link_404">Go to Home</a>
+        </div>
+    </section>
+</body>
+</html>
